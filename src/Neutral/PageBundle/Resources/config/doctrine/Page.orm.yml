@@ -1,0 +1,25 @@
+Neutral\PageBundle\Entity\Page:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        title:
+            type: string
+            length: 255
+        slug:
+            type: string
+            length: 255
+        body:
+            type: text
+        createdAt:
+            type: datetime
+        published:
+            type: boolean
+    uniqueConstraints:
+        slug_idx:
+            columns: [slug]
+    lifecycleCallbacks: {  }

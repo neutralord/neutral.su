@@ -1,0 +1,4 @@
+neutral_page_view:
+    pattern:  /{slug}
+    defaults: { _controller: NeutralPageBundle:Page:view }
+    methods:  [GET]
