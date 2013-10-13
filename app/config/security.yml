@@ -26,7 +26,7 @@ security:
             pattern:  ^/login$
             security: false
 
-        secured_area:
+        main:
             pattern:    ^/
             form_login:
                 check_path: _security_check
@@ -34,7 +34,7 @@ security:
             logout:
                 path:   /logout
                 target: /
-            #anonymous: ~
+            anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
 
