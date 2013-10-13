@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
             
             new Neutral\PageBundle\NeutralPageBundle(),
+            new Neutral\FrontendBundle\NeutralFrontendBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

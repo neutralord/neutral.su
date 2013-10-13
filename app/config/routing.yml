@@ -1,3 +1,7 @@
+neutral_frontend:
+    resource: "@NeutralFrontendBundle/Resources/config/routing.yml"
+    prefix:   /
+
 neutral_page:
     resource: "@NeutralPageBundle/Resources/config/routing.yml"
     prefix:   /
