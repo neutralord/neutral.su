@@ -1,0 +1,7 @@
+parameters:
+#    neutral_user.example.class: Neutral\UserBundle\Example
+
+services:
+#    neutral_user.example:
+#        class: %neutral_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

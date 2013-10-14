@@ -1,0 +1,10 @@
+# Security
+"Bad credentials": Неправильное имя пользователя или пароль
+
+security:
+    login:
+        username: "Имя пользователя:"
+        password: "Пароль:"
+        remember_me: Запомнить меня
+        submit: Войти
+
