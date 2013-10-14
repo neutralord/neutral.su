@@ -1,3 +1,7 @@
+neutral_admin:
+    resource: "@NeutralAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
 neutral_user:
     resource: "@NeutralUserBundle/Resources/config/routing.yml"
     prefix:   /

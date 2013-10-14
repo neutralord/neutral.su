@@ -1,0 +1,15 @@
+neutral_admin_page_list:
+    pattern:  /pages
+    defaults: { _controller: NeutralAdminBundle:Page:list }
+    
+neutral_admin_page_edit:
+    pattern:  /pages/{pageId}/edit
+    defaults: { _controller: NeutralAdminBundle:Page:edit }
+
+neutral_admin_page_create:
+    pattern:  /pages/create
+    defaults: { _controller: NeutralAdminBundle:Page:create }
+    
+neutral_admin_page_delete:
+    pattern:  /pages/{pageId}/delete
+    defaults: { _controller: NeutralAdminBundle:Page:delete }

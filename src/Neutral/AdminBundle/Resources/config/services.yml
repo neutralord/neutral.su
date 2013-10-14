@@ -1,0 +1,7 @@
+parameters:
+#    neutral_admin.example.class: Neutral\AdminBundle\Example
+
+services:
+#    neutral_admin.example:
+#        class: %neutral_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

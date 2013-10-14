@@ -1,0 +1,11 @@
+<a href="{{ path('neutral_admin_page_create') }}">[create new page]</a>
+<ul>
+{% for page in pages %}
+        <li>
+            <a href="{{ path('neutral_page_view', {'slug': page.slug}) }}">{{ page.slug }}</a>:
+            "{{ page.title }}"
+            <a href="{{ path('neutral_admin_page_edit', {'pageId': page.id}) }}">[edit]</a>
+            <a href="{{ path('neutral_admin_page_delete', {'pageId': page.id}) }}">[delete]</a>
+        </li>
+{% endfor %}
+</ul>
