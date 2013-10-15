@@ -13,3 +13,20 @@ neutral_admin_page_create:
 neutral_admin_page_delete:
     pattern:  /pages/{pageId}/delete
     defaults: { _controller: NeutralAdminBundle:Page:delete }
+
+
+neutral_admin_post_list:
+    pattern:  /posts
+    defaults: { _controller: NeutralAdminBundle:Post:list }
+    
+neutral_admin_post_edit:
+    pattern:  /posts/{postId}/edit
+    defaults: { _controller: NeutralAdminBundle:Post:edit }
+
+neutral_admin_post_create:
+    pattern:  /posts/create
+    defaults: { _controller: NeutralAdminBundle:Post:create }
+    
+neutral_admin_post_delete:
+    pattern:  /posts/{postId}/delete
+    defaults: { _controller: NeutralAdminBundle:Post:delete }

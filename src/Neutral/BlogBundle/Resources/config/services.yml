@@ -1,0 +1,7 @@
+parameters:
+#    neutral_blog.example.class: Neutral\BlogBundle\Example
+
+services:
+#    neutral_blog.example:
+#        class: %neutral_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

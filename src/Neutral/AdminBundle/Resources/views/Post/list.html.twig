@@ -1,0 +1,11 @@
+<a href="{{ path('neutral_admin_post_create') }}">[create new post]</a>
+<ul>
+{% for post in posts %}
+        <li>
+            <a href="{{ path('neutral_blog_post', {'slug': post.slug}) }}">{{ post.slug }}</a>:
+            "{{ post.title }}"
+            <a href="{{ path('neutral_admin_post_edit', {'postId': post.id}) }}">[edit]</a>
+            <a href="{{ path('neutral_admin_post_delete', {'postId': post.id}) }}">[delete]</a>
+        </li>
+{% endfor %}
+</ul>
