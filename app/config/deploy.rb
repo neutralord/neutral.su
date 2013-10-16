@@ -5,7 +5,7 @@ set :deploy_to,   "/home/neutral/www/neutral.su"
 set :app_path,    "app"
 set :web_path,    "web"
 
-set :repository,  "git@github.com:neutralord/neutral.su.git"
+set :repository,  "https://github.com/neutralord/neutral.su.git"
 set :scm,         :git
 
 set :model_manager, "doctrine"
