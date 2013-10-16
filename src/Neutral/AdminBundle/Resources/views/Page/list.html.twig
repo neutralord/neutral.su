@@ -1,3 +1,6 @@
+{% extends "NeutralAdminBundle::layout.html.twig" %}
+
+{% block content_content %}
 <a href="{{ path('neutral_admin_page_create') }}">[create new page]</a>
 <ul>
 {% for page in pages %}
@@ -9,3 +12,4 @@
         </li>
 {% endfor %}
 </ul>
+{% endblock content_content %}

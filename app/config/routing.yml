@@ -10,9 +10,11 @@ neutral_user:
     resource: "@NeutralUserBundle/Resources/config/routing.yml"
     prefix:   /
 
-neutral_frontend:
-    resource: "@NeutralFrontendBundle/Resources/config/routing.yml"
-    prefix:   /
+neutral_homepage:
+    pattern:  /
+    defaults:
+        _controller: NeutralPageBundle:Page:view
+        slug: home
 
 neutral_page:
     resource: "@NeutralPageBundle/Resources/config/routing.yml"

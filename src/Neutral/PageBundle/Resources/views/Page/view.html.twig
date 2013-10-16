@@ -1,2 +1,9 @@
-{{ page.title }}
-{{ page.body }}
+{% extends "NeutralPageBundle::layout.html.twig" %}
+
+{% block title %}{{ page.title }} - {{ parent() }}{% endblock title %}
+
+{% block headline %}{{ page.title }}{% endblock headline %}
+
+{% block content_content %}
+    {{ page.body|raw }}
+{% endblock content_content %}

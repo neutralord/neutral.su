@@ -1,6 +1,16 @@
-{% for post in posts %}
-    {{ post.title }}
-    {{ post.slug }}
-    {{ post.preview }}
-    {{ path('neutral_blog_post', {'slug': post.slug}) }}
-{% endfor %}
+{% extends "NeutralBlogBundle::layout.html.twig" %}
+
+{% block headline %}Blog{% endblock headline %}
+
+{% block content_content %}
+    {% for post in posts %}
+        <article>
+            <header>
+                <h2>{{ post.title }}</h2>
+                <p><time datetime="{{ post.createdAt.format("Y-m-d") }}">{{ post.createdAt.format("Y-m-d") }}</time></p>
+            </header>
+            <div>{{ post.preview|raw }}</div>
+            <a href="{{ path('neutral_blog_post', {'slug': post.slug}) }}">Read more</a>
+        </article>
+    {% endfor %}
+{% endblock content_content %}

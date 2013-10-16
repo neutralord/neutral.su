@@ -1,3 +1,0 @@
-neutral_frontend_homepage:
-    pattern:  /
-    defaults: { _controller: NeutralFrontendBundle:Frontend:index }

@@ -16,9 +16,9 @@ class LoadPageData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $page = new Page();
-        $page->setTitle('Sample page')
-                ->setBody('Just a page!')
-                ->setSlug('simple-page')
+        $page->setTitle('My own website ^____^')
+                ->setBody('Just a website!')
+                ->setSlug('home')
                 ->setPublished(true)
         ;
         $manager->persist($page);

@@ -20,9 +20,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             
             new Neutral\PageBundle\NeutralPageBundle(),
-            new Neutral\FrontendBundle\NeutralFrontendBundle(),
             new Neutral\UserBundle\NeutralUserBundle(),
             new Neutral\AdminBundle\NeutralAdminBundle(),
             new Neutral\BlogBundle\NeutralBlogBundle(),

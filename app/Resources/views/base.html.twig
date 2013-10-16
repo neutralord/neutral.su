@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>{% block title %}Neutral.su{% endblock title %}</title>
+    {% block head_style %}
+        {% stylesheets
+            '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
+            '@MopaBootstrapBundle/Resources/public/less/eyecon-datepicker.less'
+        %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+        {% endstylesheets %}
+    {% endblock head_style %}
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head_script %}
+        {% javascripts
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+        %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock head_script %}
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}
+    <div class="{% block container_class %}container{% endblock container_class %}">
+        <nav class="navbar  navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Neutral</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/me">About me</a></li>
+          </ul>
+          
+        </div><!-- /.navbar-collapse -->
+      </nav>
+        
+        <div class="content">
+            <div class="page-header">
+                  <h1>{% block headline %}My own website ^____^{% endblock headline %}</h1>
+            </div>
+            
+            {% block content_row %}
+            <div class="row">
+                {% block content %}
+                <div class="col-sm-9">
+                    {% block content_content %}
+                    {% endblock content_content %}
+                </div>
+                <div class="col-sm-3">
+                    {% block content_sidebar %}
+                    <h2>GIRL!</h2>
+                    <p>I wanna take you to a sidebar!</p>
+                    {% endblock content_sidebar %}
+                </div>
+                {% endblock content %}
+            </div>
+            {% endblock content_row %}
+                
+        </div>
+            
+        <footer>
+           <hr>
+           {% block footer %}
+           <p>&copy; <a href="http://neutral.su/me">Nikita Dementev</a> 2013</p>
+           {% endblock footer %}
+       </footer>
+    </div>
+    {% block foot_script %}
+        {% javascripts
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/tooltip.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/affix.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/alert.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/button.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/carousel.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/collapse.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/dropdown.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/modal.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/popover.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/scrollspy.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/tab.js'
+            '@MopaBootstrapBundle/Resources/public/bootstrap/js/transition.js'
+            '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-collection.js'
+            '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-subnav.js'
+            '@MopaBootstrapBundle/Resources/public/js/eyecon-bootstrap-datepicker.js'
+        %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+                $(document).ready(function () {
+                    $('[data-toggle="popover"]').popover();
+                });
+            </script>
+    {% endblock foot_script %}
+
+{% endblock body %}
+</body>
+</html>

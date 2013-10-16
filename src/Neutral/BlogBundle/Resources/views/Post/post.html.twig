@@ -1,4 +1,9 @@
+{% extends "NeutralBlogBundle::layout.html.twig" %}
 
-    {{ post.title }}
-    {{ post.slug }}
-    {{ post.fullText }}
+{% block title %}{{ post.title }} - {{ parent() }}{% endblock title %}
+
+{% block headline %}{{ post.title }}{% endblock headline %}
+
+{% block content_content %}
+    {{ post.fullText|raw }}
+{% endblock content_content %}
