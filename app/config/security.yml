@@ -14,7 +14,7 @@ security:
             memory:
                 users:
                     neutral:
-                        password: 2bf468603ab1fec55bdece24a8e3f1dab9354978
+                        password: %neutral_password%
                         roles: [ 'ROLE_SUPER_ADMIN' ]
 
     firewalls:
