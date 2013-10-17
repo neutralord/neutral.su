@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Neutral\UserBundle\NeutralUserBundle(),
             new Neutral\AdminBundle\NeutralAdminBundle(),
             new Neutral\BlogBundle\NeutralBlogBundle(),
+            new Neutral\MenuBundle\NeutralMenuBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

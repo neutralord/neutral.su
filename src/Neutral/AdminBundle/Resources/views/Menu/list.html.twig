@@ -1,0 +1,15 @@
+{% extends "NeutralAdminBundle::layout.html.twig" %}
+
+{% block content_content %}
+<a href="{{ path('neutral_admin_menu_create') }}">[create new menu]</a>
+<ul>
+{% for menu in menuList %}
+        <li>
+            {{ menu.alias }}:
+            "{{ menu.title }}"
+            <a href="{{ path('neutral_admin_menu_edit', {'menuId': menu.id}) }}">[edit]</a>
+            <a href="{{ path('neutral_admin_menu_delete', {'menuId': menu.id}) }}">[delete]</a>
+        </li>
+{% endfor %}
+</ul>
+{% endblock content_content %}

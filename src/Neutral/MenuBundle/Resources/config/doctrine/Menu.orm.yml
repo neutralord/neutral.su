@@ -1,0 +1,30 @@
+Neutral\MenuBundle\Entity\Menu:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        title:
+            type: string
+            length: 255
+        alias:
+            type: string
+            length: 255
+        template:
+            type: string
+            length: 255
+            nullable: true
+    uniqueConstraints:
+        alias_idx:
+            columns: [alias]
+    oneToMany:
+        items:
+            targetEntity: MenuItem
+            mappedBy: menu
+            cascade: ["persist", "remove"]
+            orderBy:
+                ordinate: ASC
+    lifecycleCallbacks: {  }

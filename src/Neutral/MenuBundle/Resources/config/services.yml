@@ -1,0 +1,9 @@
+parameters:
+    neutral_menu.twig.extension.class: Neutral\MenuBundle\Twig\Extension\MenuExtension
+
+services:
+    neutral_menu.twig.extension:
+        class: %neutral_menu.twig.extension.class%
+        arguments: ["@doctrine.orm.entity_manager", "@service_container"]
+        tags:
+            - { name: twig.extension }

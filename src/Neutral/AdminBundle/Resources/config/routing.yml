@@ -30,3 +30,20 @@ neutral_admin_post_create:
 neutral_admin_post_delete:
     pattern:  /posts/{postId}/delete
     defaults: { _controller: NeutralAdminBundle:Post:delete }
+
+
+neutral_admin_menu_list:
+    pattern:  /menu
+    defaults: { _controller: NeutralAdminBundle:Menu:list }
+    
+neutral_admin_menu_edit:
+    pattern:  /menu/{menuId}/edit
+    defaults: { _controller: NeutralAdminBundle:Menu:edit }
+
+neutral_admin_menu_create:
+    pattern:  /menu/create
+    defaults: { _controller: NeutralAdminBundle:Menu:create }
+    
+neutral_admin_menu_delete:
+    pattern:  /menu/{menuId}/delete
+    defaults: { _controller: NeutralAdminBundle:Menu:delete }
