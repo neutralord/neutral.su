@@ -18,5 +18,5 @@ neutral_homepage:
 
 neutral_page:
     resource: "@NeutralPageBundle/Resources/config/routing.yml"
-    prefix:   /page
+    prefix:   /
 
