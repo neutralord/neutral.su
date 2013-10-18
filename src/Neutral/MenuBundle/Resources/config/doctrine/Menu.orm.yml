@@ -25,6 +25,7 @@ Neutral\MenuBundle\Entity\Menu:
             targetEntity: MenuItem
             mappedBy: menu
             cascade: ["persist", "remove"]
+            orphanRemoval: true
             orderBy:
                 ordinate: ASC
     lifecycleCallbacks: {  }
