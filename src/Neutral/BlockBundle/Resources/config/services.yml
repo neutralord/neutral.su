@@ -1,0 +1,26 @@
+parameters:
+    neutral_block.provider.class: Neutral\BlockBundle\Block\BlockProvider
+    neutral_block.factory.class: Neutral\BlockBundle\Block\BlockFactory
+    neutral_block.page_block.repository.class: Neutral\BlockBundle\Block\Page\PageBlockRepository
+    neutral_block.twig.extension.class: Neutral\BlockBundle\Twig\Extension\BlockExtension
+    
+services:
+    neutral_block.provider:
+        class: %neutral_block.provider.class%
+      
+    neutral_block.factory:
+        class: %neutral_block.factory.class%
+        calls:
+            - [setContainer, ["@service_container"]]
+            
+    neutral_block.page_block.repository:
+        class: %neutral_block.page_block.repository.class%
+        arguments: ["@doctrine.orm.entity_manager", "@neutral_block.factory"]
+        tags:
+            - { name: neutral_block.repository }
+            
+    neutral_block.twig.extension:
+        class: %neutral_block.twig.extension.class%
+        arguments: ["@neutral_block.provider"]
+        tags:
+            - { name: twig.extension }
