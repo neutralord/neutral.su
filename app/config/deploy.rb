@@ -21,4 +21,11 @@ set :shared_children,     [app_path + "/logs", web_path + "/upload", "vendor"]
 set :use_composer, true
 set :update_vendors, true
 
+set :dump_assetic_assets,   true
+
+set :writable_dirs,       ["app/cache"]
+set :webserver_user,      "www-data"
+set :permission_method,   :acl
+set :use_set_permissions, true
+
 logger.level = Logger::MAX_LEVEL
