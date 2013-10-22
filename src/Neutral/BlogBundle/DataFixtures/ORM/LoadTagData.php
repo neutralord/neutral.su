@@ -17,13 +17,11 @@ class LoadTagData extends AbstractFixture implements OrderedFixtureInterface
     {
         $tag = new Tag();
         $tag->setTitle('Sample tag')
-                ->setSlug('sample-tag')
                 ->setWeight(1)
         ;
         
         $tag2 = new Tag();
         $tag2->setTitle('Another tag')
-                ->setSlug('another-tag')
                 ->setWeight(2)
         ;
         

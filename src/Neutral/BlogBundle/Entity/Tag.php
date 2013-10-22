@@ -20,11 +20,6 @@ class Tag
     private $title;
 
     /**
-     * @var string
-     */
-    private $slug;
-
-    /**
      * @var integer
      */
     private $weight = 0;
@@ -50,10 +45,6 @@ class Tag
     {
         $this->title = $title;
     
-        if (null === $this->getSlug()) {
-            $this->setSlug(strtolower(preg_replace('/[^\da-zA-Z]+/', '-', trim($title))));
-        }
-        
         return $this;
     }
 
@@ -65,29 +56,6 @@ class Tag
     public function getTitle()
     {
         return $this->title;
-    }
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     * @return Tag
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-    
-        return $this;
-    }
-
-    /**
-     * Get slug
-     *
-     * @return string 
-     */
-    public function getSlug()
-    {
-        return $this->slug;
     }
 
     /**

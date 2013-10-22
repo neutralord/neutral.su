@@ -10,14 +10,11 @@ Neutral\BlogBundle\Entity\Tag:
         title:
             type: string
             length: 255
-        slug:
-            type: string
-            length: 255
         weight:
             type: integer
     uniqueConstraints:
-        slug_idx:
-            columns: [slug]
+        title_idx:
+            columns: [title]
     manyToMany:
         posts:
             targetEntity: Post
