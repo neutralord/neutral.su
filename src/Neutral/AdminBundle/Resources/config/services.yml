@@ -1,7 +1,9 @@
 parameters:
-#    neutral_admin.example.class: Neutral\AdminBundle\Example
+    neutral_admin.form.type.tags.class: Neutral\AdminBundle\Form\Type\TagsType
 
 services:
-#    neutral_admin.example:
-#        class: %neutral_admin.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    neutral_admin.form.type.tags:
+        class: %neutral_admin.form.type.tags.class%
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: tags }

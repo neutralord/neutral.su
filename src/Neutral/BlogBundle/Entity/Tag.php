@@ -50,6 +50,10 @@ class Tag
     {
         $this->title = $title;
     
+        if (null === $this->getSlug()) {
+            $this->setSlug(strtolower(preg_replace('/[^\da-zA-Z]+/', '-', trim($title))));
+        }
+        
         return $this;
     }
 

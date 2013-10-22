@@ -14,6 +14,7 @@ class PostFormType extends AbstractType
         ->add('slug')
         ->add('body')
         ->add('published', null, ['required' => false])
+        ->add('tags', 'tags', ['required' => false])
         ->add('save', 'submit')
         ;
     }

@@ -28,6 +28,7 @@ Neutral\BlogBundle\Entity\Post:
         tags:
             targetEntity: Tag
             cascade: [persist]
+            orphanRemoval: true
             joinTable:
                 name: post_tags
                 joinColumns:
