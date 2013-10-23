@@ -6,4 +6,9 @@
 
 {% block content_content %}
     {{ post.fullText|raw }}
+    <ul>
+    {% for tag in post.tags %}
+        <li>{{ tag }}</li>
+    {% endfor %}
+    </ul>
 {% endblock content_content %}

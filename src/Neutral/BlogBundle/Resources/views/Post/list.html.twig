@@ -11,6 +11,11 @@
             </header>
             <div>{{ post.preview|raw }}</div>
             <a href="{{ path('neutral_blog_post', {'slug': post.slug}) }}">Read more</a>
+            <ul>
+            {% for tag in post.tags %}
+                <li>{{ tag }}</li>
+            {% endfor %}
+            </ul>
         </article>
     {% endfor %}
 {% endblock content_content %}
