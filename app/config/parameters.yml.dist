@@ -14,3 +14,8 @@ parameters:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
     neutral_password:  VeryStrongPassword
+
+    session_memcached_host:     localhost
+    session_memcached_port:     11211
+    session_memcached_prefix:   neutral_sessions
+    session_memcached_expire:   3600
