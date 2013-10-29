@@ -19,3 +19,6 @@ parameters:
     session_memcached_port:     11211
     session_memcached_prefix:   neutral_sessions
     session_memcached_expire:   3600
+
+    google_analytics_key: ~
+    google_analytics_account: ~

@@ -1,0 +1,9 @@
+parameters:
+    neutral_templating.helper.twig.extension.class: Neutral\TemplatingBundle\Twig\Extension\HelperExtension
+
+services:
+    neutral_templating.helper.twig.extension:
+        class: %neutral_templating.helper.twig.extension.class%
+        arguments: ["@service_container"]
+        tags:
+            - { name: twig.extension }
