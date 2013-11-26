@@ -2,6 +2,10 @@ neutral_blog_index:
     pattern:  /
     defaults: { _controller: NeutralBlogBundle:Post:list }
     
+neutral_blog_feed_atom:
+    pattern:  /atom.xml
+    defaults: { _controller: NeutralBlogBundle:Feed:atom }
+
 neutral_blog_post:
     pattern:  /{slug}
     defaults: { _controller: NeutralBlogBundle:Post:post }
