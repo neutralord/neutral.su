@@ -11,7 +11,14 @@ class FeedController extends Controller
     public function atomAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $posts = $em->getRepository('NeutralBlogBundle:Post')->findAll();
+        $qb = $em->createQueryBuilder();
+        $posts = $qb->add('select', 'p')
+            ->add('from', 'NeutralBlogBundle:Post p')
+            ->add('where', 'p.published = true')
+            ->add('orderBy', 'p.createdAt DESC')
+            ->getQuery()
+            ->getResult()
+        ;
         
         $atom = new \SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?>
             <feed xmlns="http://www.w3.org/2005/Atom" />
@@ -25,10 +32,13 @@ class FeedController extends Controller
         $selfLink->addAttribute('href', 'http://neutral.su/blog/atom.xml');
         $atom->addChild('author')
                 ->addChild('name', 'Nikita Dementev');
-        // TODO: change 'updated' to actual date
+        $updateDates = array_map(
+                function($post){ return $post->getUpdatedAt(); },
+                $posts
+        );
         $atom->addChild(
                     'updated',
-                    $posts[0]->getUpdatedAt()->format(\DateTime::ATOM)
+                    max($updateDates)->format(\DateTime::ATOM)
             );
         
         foreach ($posts as $post) {
