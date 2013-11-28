@@ -2,7 +2,7 @@
 
 {% block title %}{{ post.title }} - {{ parent() }}{% endblock title %}
 
-{% block headline %}{{ post.title }}{% endblock headline %}
+{% block headline %}{{ post.title }}{% if not post.published %} <small>[Draft]</small>{% endif %}{% endblock headline %}
 
 {% block content_content %}
     {{ post.fullText|raw }}
