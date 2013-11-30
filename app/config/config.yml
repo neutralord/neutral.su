@@ -73,7 +73,11 @@ fos_rest:
         default_format: json
     view:
         serialize_null: true
-        
+
+knp_paginator:
+    template:
+        pagination: NeutralTemplatingBundle:Pagination:sliding.html.twig
+
 services:      
     session.memcached:
         class: Memcached
